@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* hero section */
+.banner {
+    height: 100vh;
+    background:url("image/hero_home.png")no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Added relative positioning */
+    background-blend-mode:color-dodge;
+}
+
+.hero-text {
+    color: #064789;
+    font-size: 7vw;
+    font-family: Impact, sans-serif;
+    padding: 8px 0px 0px 0px;
+    top: 30%;
+    left: 10%;
+    position: absolute;
+    text-align: left;
+}
+
+.text{
+	color: #000;
+	font-family: Arial, sans-serif;
+	font-size: 32px;
+	font-weight: bold;
+	padding: 8px 39% 0px 0px;
+    top: 60%;
+    left: 10%;
+    position: absolute;
+    text-align: left;
+}
+/*end of hero section*/
+
+
+
+/*our goal section*/
+
+.list-number ul{
+	 list-style-type: none;
+            padding: 0;
+            margin: 0;
+}
+           
+
+        /* Style for list items */
+  .list-number li{
+            display: flex;
+            margin-bottom: 5%;
+        }
+
+        /* Style for number */
+.number-goal{
+            color: #064789;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            margin-right: 5%;
+	font-size: 50px;
+	font-family: "Arial Black";
+        }
+
+        /* Style for title */
+.title-goal{
+            font-weight: bold;
+            margin-bottom: 10px; 
+	text-align: left;
+	color: #064789;
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+        }
+
+/* Style for content */
+.content-goal{
+            color: #000;
+	text-align: left;
+		font-family: Arial, sans-serif;
+	font-size: 16px;
+        }
+
+.exp-img{
+	width: 100%;
+	
+}
+
+/*share exp button*/
+.button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+	text-align: center;
+	margin: 6%;
+	background-color: #064789;
+}
+
+.svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+	font-size:50px;
+	color: #FFFFFF;
+}
+
+
+
+.button:hover {
+  width: 200px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color:white;
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+	color: #064789;
+}
+
+.button::before {
+  position: absolute;
+  top: -20px;
+  content: "Share";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.button:hover::before {
+  font-size: 20px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+	padding-top: 5px;
+	color: #064789;
+}
+
+
+/*title of h4 padding at resources*/
+.resource{
+	padding-right: 55%;
+margin: 0% 0 5% 5%;
+}
+
+.count-num{
+	font-size:54px;
+	font-family: "Arial Black", Arial, sans-serif;
+	color:#064789;
+}
+
+.count-col{
+  padding: 5% 5%;
+  background-color: #ebf2fa;
+	margin: 0 0 3% 0;
+}
+
+/*button design 1*/
+.button-dark{
+  outline: none;
+  cursor: pointer;
+  border-radius: 500px;
+  transition-property: background-color,border-color,color,box-shadow,filter;
+  transition-duration: .3s;
+  border: 2px solid #f8931f;
+  letter-spacing: 2px;
+  max-width: 350px;
+  text-transform: uppercase;
+  white-space: normal;
+  text-align: center;
+  padding: 14px 30px 20px ;
+	margin: 0 0 5% 0;
+  color: #2c3639;
+  box-shadow: inset 0 0 0 2px #f8931f;
+  background-color: transparent;
+  height: 60px;
+  font-family: "Arial Black", Arial, sans-serif;
+	font-size: 18px;
+}
+  .button-dark:hover{
+      color: black;
+      background-color: #f8931f;
+  }
+
+/*slick slider for recent news*/
+.wrapper{
+  padding: 70px 0;
+  overflow-x: hidden;
+}
+
+
+.my-slider{
+  padding: 0 70px;
+  max-height: 300px; /* 设置父级容器的最大高度为 300px */
+  overflow: hidden; /* 隐藏超出容器的内容 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+.slick-initialized .slick-slide{
+  background-color: white;
+  border: 2px solid black;
+  color: #000; /* 修改文本颜色为黑色 */
+  height: 100%; /* 设置幻灯片高度为父级容器高度的百分比 */
+  margin: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	transition: ease 0.5s;
+}
+
+.slick-slide:hover{
+	 transform: scale(1.05); /* hover时放大容器 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* 添加阴影效果 */
+	border-radius: 10px;
+}
+
+.my-slider img{
+  max-height:80%; /* 图片最大高度为父级容器高度 */
+  object-fit: contain; /* 使图片按比例缩放以适应父级容器，不会裁剪 */
+  max-width: 100%; /* 图片最大宽度为父级容器宽度 */
+  margin-right: 10px; /* 可根据需要调整图片与文字之间的间距 */
+}
+
+.my-slider a {
+  text-decoration: none; /* 去除文本装饰 */
+  color: black; /* 文本颜色为黑色 */
+}
+
+.my-slider p{
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 2%;
+}
+}
+.slick-next{
+  right: 15px;
+}
+.slick-prev{
+  left: 15px;
+}
+.slick-next:before, .slick-prev:before{
+  color: #000;
+  font-size: 26px;
+}
