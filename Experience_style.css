@@ -63,7 +63,7 @@ article {
     margin: 3em auto;
     font-size: 75%;
     position: relative;
-    *zoom: 1;
+
 	background-color: #ebf2fa;
 	border-radius: 10px;
 	border: 2px solid black;
@@ -82,7 +82,7 @@ article {
     margin-bottom:5%;
     position: relative;
 	padding: 3%;
-    *zoom: 1;
+
 }
 
 article:before, article:after {
@@ -210,8 +210,7 @@ input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
 article.expanded {
     padding-bottom: 10%; /* 扩展后的padding-bottom */
 }
-    padding-bottom: 10%; /* 扩展后的padding-bottom */
-}
+
 
 
 @media (max-width: 768px) {
@@ -219,6 +218,6 @@ article.expanded {
     margin-bottom:5%;
     position: relative;
 	padding: 3% 3% 7% 3%;
-    *zoom: 1;
+  
 }
 }
