@@ -73,7 +73,7 @@ $currentPage = 'home';
 	
 	
 <!--our goal part-->
-<div class="row" id="section2">
+<div class="row" id="section2" style="margin-top: 2%">
 	<div class="col-6 reveal fade-left" style="padding-left: 0">
 	<img src="image/1012-equity-keypolicies.png">
 	</div>
@@ -112,8 +112,14 @@ $currentPage = 'home';
 	</div>
 	
 <!--Share your experience part-->
+
 <div class="row" style="padding: 5% 0;align-items: center;">
     <div class="col-6 reveal fade-left" style="padding-left: 5%">
+<br>
+<br>
+<br>
+<br>
+		
         <h2>
             Share Your Experience
         </h2>
@@ -250,8 +256,6 @@ $currentPage = 'home';
     <!-- Add more slides similarly -->
   </div>
 </div>
-
-<button>learn more</button>
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

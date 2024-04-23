@@ -3,7 +3,7 @@
 $(document).ready(function(){
       $('.my-slider').slick({
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         arrows: true,
         dots: true,
         speed: 300,

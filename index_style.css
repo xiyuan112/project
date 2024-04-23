@@ -112,7 +112,6 @@
 }
 
 
-
 .button:hover {
   width: 200px;
   border-radius: 50px;
@@ -194,7 +193,7 @@ margin: 0% 0 5% 5%;
 
 /*slick slider for recent news*/
 .wrapper{
-  padding: 70px 0;
+  padding: 2% 0 5% 0;
   overflow-x: hidden;
 }
 
@@ -242,7 +241,7 @@ margin: 0% 0 5% 5%;
   font-size: 18px;
   padding: 2%;
 }
-}
+
 .slick-next{
   right: 15px;
 }

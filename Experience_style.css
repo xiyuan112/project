@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* hero section */
+.banner {
+    height: 100vh;
+	background: url("image/overhead-view-female-holding-smartphone.jpg") no-repeat;
+	background-size: cover;
+    background-position: center;
+    position: relative; /* Added relative positioning */
+    background-blend-mode:color-dodge;
+}
+
+.hero-text {
+    color: #064789;
+    font-size: 7vw;
+    font-family: Impact, sans-serif;
+    padding: 8px 0px 0px 0px;
+    top: 30%;
+    right: 10%;
+    position: absolute;
+    text-align: right;
+}
+
+.text{
+	color: #000;
+	font-family: Arial, sans-serif;
+	font-size: 32px;
+	font-weight: bold;
+	padding: 8px 0px 0px 45%;
+	top: 65%;
+	right: 10%;
+    position: absolute;
+    text-align: right;
+}
+/*end of hero section*/
+
+
+figure {
+    margin: 2%;
+    -webkit-transition: .125s linear;
+    -moz-transition: .125s linear;
+    -ms-transition: .125s linear;
+    -o-transition: .125s linear;
+    transition: .125s linear;
+	border-radius: 10px;
+}
+
+figure img {
+    width: 100%; /* Maintain full width */
+    height: 250px; /* Fixed height for "read less" */
+    object-fit: cover;
+    transition: height 0.3s ease-in-out; /* Smooth transition on height */
+	border-radius: 10px;
+}
+
+input[type=checkbox]:checked ~ figure img {
+    height: auto; /* Reset height to auto when "read more" */
+	
+}
+
+article {
+    max-width: 1250px;
+    width: 90%;
+    margin: 3em auto;
+    font-size: 75%;
+    position: relative;
+    *zoom: 1;
+	background-color: #ebf2fa;
+	border-radius: 10px;
+	border: 2px solid black;
+}
+
+article:before, article:after {
+    content: "";
+    display: table;
+}
+
+article:after {
+    clear: both;
+}
+
+article {
+    margin-bottom:5%;
+    position: relative;
+	padding: 3%;
+    *zoom: 1;
+}
+
+article:before, article:after {
+    content: "";
+    display: table;
+}
+
+article:after { clear: both }
+
+article figure {
+    float: left;
+    width: 32.5%;
+}
+
+article section:first-of-type {
+    float: right;
+    width: 62.5%;
+}
+
+article section:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+section {
+    -webkit-transition: .125s linear;
+    -moz-transition: .125s linear;
+    -ms-transition: .125s linear;
+    -o-transition: .125s linear;
+    transition: .125s linear;
+	padding:2%;
+}
+
+input[type=checkbox] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+[for="read_more"] {
+    position: absolute;
+	bottom: 5%;
+    right: 5%; /* Adjusted to right */
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border-radius: 500px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: .3s;
+    border: 2px solid #f8931f;
+    max-width: 350px;
+    text-transform: uppercase;
+    padding: 2% ;
+    color: #2c3639;
+    background-color: transparent;
+    height: 20px;
+    display: flex; /* Adding flexbox */
+    align-items: center; /* Center vertically */
+	
+}
+
+[for="read_more"]:hover {
+      color: black;
+      background-color: #f8931f;
+}
+
+span{
+font-family:Arial, sans-serif;
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+}
+
+label{
+	width: 200px;
+	text-align: center;
+}
+
+
+[for="read_more"] span:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+/* Adjusted for vertical alignment */
+[for="read_more"] span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+input[type=checkbox]:checked ~ section {
+    display: block;
+    visibility: visible;
+    width: 100%;
+}
+
+input[type=checkbox]:checked ~ figure {
+    width: 100%;
+	border-radius: 10px;
+
+}
+
+input[type=checkbox]:checked ~ figure img {
+max-height: 500px;
+	max-width: 100%;
+	object-fit: scale-down;
+}
+
+input[type=checkbox]:checked ~ [for="read_more"] span:first-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
+    display: block;
+    visibility: visible;
+}
+
+article.expanded {
+    padding-bottom: 10%; /* 扩展后的padding-bottom */
+}
+    padding-bottom: 10%; /* 扩展后的padding-bottom */
+}
+
+
+@media (max-width: 768px) {
+	article {
+    margin-bottom:5%;
+    position: relative;
+	padding: 3% 3% 7% 3%;
+    *zoom: 1;
+}
+}

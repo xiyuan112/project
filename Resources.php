@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About</title>
-	<!--icon menu-->
-	<script src="https://kit.fontawesome.com/976be346af.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources</title>
+<!--icon menu-->
+<script src="https://kit.fontawesome.com/976be346af.js" crossorigin="anonymous"></script>
+<!-- commom css style -->
 <link href="mystyle.css" rel="stylesheet" type="text/css">
-<link href="About_style.css" rel="stylesheet" type="text/css">
-	<!--scroll down smooth next section-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="Resources_style.css" rel="stylesheet" type="text/css">
+<!--scroll down smooth next section-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -41,7 +43,7 @@ $(document).ready(function(){
 	
 	<!--responsive navigation-->
 	<?php
-$currentPage = 'about';
+$currentPage = 'resources';
 ?>
 <?php include 'menu.php'; ?>
 
