@@ -14,7 +14,7 @@
     font-size: 7vw;
     font-family: Impact, sans-serif;
     padding: 8px 0px;
-    top: 25%;  
+    top: 35%;  
     left: 50%;
     transform: translateX(-50%);  
     position: absolute;
@@ -27,7 +27,7 @@
     font-size: 32px;
     font-weight: bold;
     padding: 8px 0px;
-    top: 70%; 
+    top: 65%; 
     left: 50%;
     transform: translate(-50%, -50%); 
     position: absolute;
@@ -37,10 +37,8 @@
 /*end of hero section*/
 
 
-
-
 .contact-form1 {
-            width: 735px;
+            max-width: 735px;
             margin: 5% auto;  
             padding: 3%;
             background: #ebf2fa;  
@@ -197,6 +195,7 @@ option {
   position: relative;
 	text-align: center;
 	background-color: #064789;
+	text-decoration: none;
 }
 
 .svgIcon {
@@ -204,6 +203,7 @@ option {
   transition-duration: .3s;
 	font-size:50px;
 	color: #FFFFFF;
+	font-weight: bolder;
 }
 
 
@@ -248,16 +248,16 @@ option {
   gap: 5%;  /* 元素之间的间距 */
 }
 
-/* 媒体查询：在小于等于 600px 时，改为垂直布局 */
+
 @media (max-width: 768px) {
   .responsive-container {
-    flex-direction: column;  /* 使元素在较小屏幕上垂直排列 */
-    justify-content: center;  /* 水平居中 */
-    align-items: center;  /* 垂直居中 */
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;  
   }
 
   .responsive-container .button {
-    margin-top: 10px;  /* 在垂直布局中，按钮与 h3 之间的间距 */
+    margin-top: 10px; 
   }
 	
 	.contact-form1 input,
@@ -266,6 +266,71 @@ option {
     width: 100%;  /* 让输入框占据整个父容器的宽度 */
     margin-right: 0;  /* 移除输入框之间的右侧间距 */
 }
-
 }
 
+@media (max-width: 768px) {
+.hero-text {
+    font-size: 40px;
+    top: 30%;  
+    left: 50%;
+    transform: translateX(-50%);  
+}
+
+.text {
+    font-size: 26px;
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+	padding: 0;
+}
+
+.button {
+  width: 60px;
+  height: 60px;
+  margin-top: 10%;
+}
+
+.svgIcon {
+  width: 30px;
+  transition-duration: .3s;
+	font-size:30px;
+	color: #FFFFFF;
+}
+
+
+.button:hover {
+  width: 200px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color:white;
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+	margin-top: 5%;
+	font-size: 40px;
+}
+}
+
+/* Media query for responsive design */
+@media (max-width: 767px) {
+    .form-row {
+        flex-direction: column; /* Stack input fields vertically */
+    }
+    .form-row > div {
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .form-row {
+        flex-direction: row; /* Arrange input fields side-by-side */
+    }
+    .form-row > div {
+        flex: 1; /* Equal width for each input field */
+        margin-right: 5%; /* Add space between fields */
+    }
+    .form-row > div:last-child {
+        margin-right: 0; /* No extra space at the end */
+    }
+}

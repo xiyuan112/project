@@ -53,9 +53,9 @@
 
   <!--hero section-->
   <div class="banner" style="margin-bottom:5%;" id="#section1">
-    <h1 class="hero-text ">
+    <div class="hero-text">
       Sharing
-    </h1>
+    </div>
     <div class="text">
       Share your experiences and stories so we can create change together!
     </div>
@@ -80,7 +80,7 @@
         </div>
         <div style="margin-right: 0%">
           <label for="gender">Gender: </label>
-          <select id="gender" name="gender">
+          <select name="gender" required="required" id="gender">
             <option selected>Choose...</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -105,7 +105,7 @@
 
         <div>
           <label for="state">State：</label>
-          <select id="state" name="state">
+          <select name="state" required="required" id="state">
             <option selected>Choose...</option>
 
             <option value="Kuala Lumpur">Kuala Lumpur</option>
@@ -134,7 +134,7 @@
 
         <div style="margin-right: 0%">
           <label for="study">Study locally / abroad：</label>
-          <select id="country" name="country">
+          <select name="country" required="required" id="country">
             <option selected>Choose...</option>
             <option value="local">Local</option>
             <option value="international">International</option>
@@ -144,7 +144,7 @@
       </div>
 
       <label for="type">Type of Scholarship：</label>
-      <select id="type" name="type">
+      <select name="type" required="required" id="type">
         <option selected>Choose...</option>
 
         <option value="scholarship">Scholarship</option>
@@ -157,7 +157,7 @@
       <input type="text" name="title" required="required" placeholder="Title...">
 
       <label for="content">Content: </label>
-      <textarea id="content" name="content" placeholder="Write something on here...">
+      <textarea name="content" required="required" id="content" placeholder="Write something on here...">
 </textarea>
 
 
@@ -219,7 +219,7 @@
   <!-- 容器包裹 h3 和 a.button -->
   <div class="responsive-container" style="margin-bottom: 5%">
     <h3>Take a look at other postings.</h3>
-    <a class="button" href="Experience.php" style="margin: 0%;">
+    <a class="button" href="Experience.php">
       <i class="fa-solid fa-arrow-right svgIcon"></i>
     </a>
   </div>

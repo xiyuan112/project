@@ -54,9 +54,9 @@ $currentPage = 'home';
 	
 <!--hero section-->
 <div class="banner" style="margin-bottom:5%;" id="#section1">
-  <h1 class="hero-text ">
+  <div class="hero-text ">
     EDU EQUITY
-  </h1>
+  </div>
 	<div class="text">
 		Scholarships are more than just financial support, they are a way to recognize and encourage potential.
 	</div>

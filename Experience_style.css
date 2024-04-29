@@ -35,7 +35,6 @@
 
 
 figure {
-    margin: 2%;
     -webkit-transition: .125s linear;
     -moz-transition: .125s linear;
     -ms-transition: .125s linear;
@@ -50,6 +49,7 @@ figure img {
     object-fit: cover;
     transition: height 0.3s ease-in-out; /* Smooth transition on height */
 	border-radius: 10px;
+	border:3px solid black;
 }
 
 input[type=checkbox]:checked ~ figure img {
@@ -61,9 +61,8 @@ article {
     max-width: 1250px;
     width: 90%;
     margin: 3em auto;
-    font-size: 75%;
+    font-size: 16px;
     position: relative;
-
 	background-color: #ebf2fa;
 	border-radius: 10px;
 	border: 2px solid black;
@@ -113,45 +112,6 @@ section {
     -ms-transition: .125s linear;
     -o-transition: .125s linear;
     transition: .125s linear;
-	padding:2%;
-}
-
-input[type=checkbox] {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-}
-
-[for="read_more"] {
-    position: absolute;
-	bottom: 5%;
-    right: 5%; /* Adjusted to right */
-    text-align: center;
-    outline: none;
-    cursor: pointer;
-    border-radius: 500px;
-    transition-property: background-color, border-color, color, box-shadow, filter;
-    transition-duration: .3s;
-    border: 2px solid #f8931f;
-    max-width: 350px;
-    text-transform: uppercase;
-    padding: 2% ;
-    color: #2c3639;
-    background-color: transparent;
-    height: 20px;
-    display: flex; /* Adding flexbox */
-    align-items: center; /* Center vertically */
-	
-}
-
-[for="read_more"]:hover {
-      color: black;
-      background-color: #f8931f;
 }
 
 span{
@@ -208,16 +168,147 @@ input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
 }
 
 article.expanded {
-    padding-bottom: 10%; /* 扩展后的padding-bottom */
+    padding-bottom: 5%; /* 扩展后的padding-bottom */
 }
 
 
 
 @media (max-width: 768px) {
-	article {
-    margin-bottom:5%;
-    position: relative;
-	padding: 3% 3% 7% 3%;
-  
+.hero-text {
+    color: #064789;
+    font-size: 40px;
+    top: 45%;
+    right: 10%;
 }
+
+.text{
+	font-size: 26px;
+	top: 60%;
+	right: 10%;
+}
+	
+article figure {
+    width: 100%;
+}
+
+article section:first-of-type {
+    width: 100%;
+}
+
+	.short-content {
+		margin-bottom: 15%;
+	}
+	
+	article {
+padding-bottom: 10%;
+}
+	
+input[type=checkbox]:checked ~ .content-section .short-content {
+    display: block; /* 当复选框被选中时，隐藏短内容 */
+	margin-bottom: 0%;
+}
+	
+input[type=checkbox]:checked ~ .content-section .long-content {
+margin-bottom: 10%;
+}
+}
+
+/* 隐藏复选框 */
+input[type=checkbox] {
+    position: absolute;
+    opacity: 0; /* 不可见 */
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+/* 标签样式 */
+label[for^="read_more_"] {
+    cursor: pointer;
+    border: 2px solid #f8931f;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: background-color 0.3s;    
+    position: absolute;
+	bottom: 2%;
+    right: 5%; /* Adjusted to right */
+    outline: none;
+    border-radius: 500px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: .3s;
+    width: 200px;
+    color: #2c3639;
+    align-items: center; /* Center vertically */
+	padding: 7px;
+
+}
+
+label[for^="read_more_"]:hover {
+    background-color: #f8931f;
+    color: white;
+}
+
+/* 标签内的文本 */
+label span {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* 内容区块 */
+.content-section {
+    position: relative;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden; /* 超出部分隐藏 */
+}
+
+.short-content {
+    max-height: 200px; /* 初始显示部分的高度 */
+    overflow: hidden; /* 防止溢出 */
+}
+
+.long-content {
+    display: none; /* 初始隐藏 */
+}
+
+/* 复选框切换逻辑 */
+input[type=checkbox]:checked ~ .content-section .short-content {
+    display: block;
+}
+
+input[type=checkbox]:not(:checked) ~ .content-section .short-content {
+    margin-bottom: 5%;
+}
+
+input[type=checkbox]:checked ~ .content-section .long-content {
+    display: block; /* 当复选框被选中时，显示长内容 */
+	padding: 0 0 3% 0;
+}
+
+input[type=checkbox]:not(:checked) ~ .content-section .long-content {
+    display: none; /* 当复选框未选中时，隐藏长内容 */
+}
+
+input[type=checkbox]:not(:checked) ~ label span:last-of-type {
+    display: none; /* 未选中时隐藏 "Read Less" */
+}
+
+input[type=checkbox]:checked ~ label span:first-of-type {
+    display: none; /* 选中时隐藏 "Read More" */
+}
+
+input[type=checkbox]:checked ~ label span:last-of-type {
+    display: inline-block; /* 选中时显示 "Read Less" */
+}
+
+input[type=checkbox]:not(:checked) ~ label span:first-of-type {
+    display: inline-block; /* 未选中时显示 "Read More" */
+}
+
+input[type=checkbox]:checked ~ .content-section {
+    max-height: 100%; /* 展开全部内容 */
+	padding: 0%;
 }

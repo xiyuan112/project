@@ -18,7 +18,7 @@
 <footer>
   <div class="row" style="vertical-align: middle">
     <!--logo & slogan-->
-    <div class="col-4 reveal fade-left" style="vertical-align: middle; justify-content: center;margin-top: 5%">
+    <div class="col-4 reveal fade-left" style="vertical-align: middle; justify-content: center;">
       <a href="Index.php">
       <img src="image/logo-01.png"  alt="logo" class="logo-image">
       </a>
@@ -41,7 +41,7 @@
             <a href="Resources.php">Resources</a></li>
             <li>
             <a href="Sharing.php">Sharing</a></li>
-            <li><a href="Experience">Experience</a>
+            <li><a href="Experience.php">Experience</a>
           </li>
         </ul>
       </div>
@@ -49,7 +49,7 @@
 <!--contact form-->
 <div class="col-4 reveal fade-right" style="padding-top: 3%;">
      <h2 style="text-align: center"> Get in Touch!</h2>
-  <form class="contact-form" action="mailto:xiyuanpan0114@gmail.com" method="post">
+  <form class="contact-form"  method="post" action="mailto:xiyuanpan0114@gmail.com" method="post">
    <label for="fname">Your Name</label>
    <input name="firstname" type="text" required="required" class="contact-input" id="fname" placeholder="Your name.." style="margin-bottom: 5%">
 
@@ -67,7 +67,7 @@
    <a href="https://www.instagram.com/xiyuanpan0114/" class="social-image" target="_blank">
    <img src="image/ins.png" width="50" height="50" alt="Instagram logo"/>
    </a>
-   <a href="https://www.linkedin.com/company/energy-efficiency-movement/" class="social-image" target="_blank">
+   <a href="https://www.linkedin.com/in/%E7%86%99%E5%9B%AD-%E5%BD%AD-6853b72a3/" class="social-image" target="_blank">
    <img src="image/in.png" width="50" height="50" alt="LinkedIn logo"/>
    </a>
    </div>
